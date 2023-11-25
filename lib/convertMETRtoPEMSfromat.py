@@ -23,7 +23,7 @@ def generate_pems_format_from_adjacency(adj_matrix, node_vals, file_path):
     return np.array(from_ids), np.array(to_ids), np.array(distance)
 
 
-def PreprocessDataset(nodefile_path, adjacency_matrix_path, npz_file_path = "data/METR-LA/METR-LA_to_PEMS_from_adjacency.npz", file_type = "npy"):
+def PreprocessDataset(nodefile_path = "file path", adjacency_matrix_path="adjacency file path", npz_file_path = "data/METR-LA/METR-LA_to_PEMS_from_adjacency.npz", file_type = "npy"):
     """
     Either you give dataset files path for node and adjacency file which are downloaded from kaggle
     or 
@@ -56,4 +56,3 @@ def PreprocessDataset(nodefile_path, adjacency_matrix_path, npz_file_path = "dat
         print("Dataset already in desired format")
 
     return file_path
-PreprocessDataset()
