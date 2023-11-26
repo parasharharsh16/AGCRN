@@ -24,7 +24,7 @@ def load_st_dataset(dataset):
 
         if you are giving NPY files then put file type 'npy' else put 'npz'
         """
-        data_path = PreprocessDataset(file_type="npz",npz_file_path="data/METR-LA/METR-LA_to_PEMS_from_adjacency.npz",)
+        data_path = os.path.join(PreprocessDataset(file_type="npz",npz_file_path="data/METR-LA/METR-LA_to_PEMS_from_adjacency.npz"))
         data = np.load(data_path)['data'][:, :, 0] 
     else:
         raise ValueError

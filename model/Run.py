@@ -27,7 +27,7 @@ MODEL = 'AGCRN'
 
 #get configuration
 config_file = './{}_{}.conf'.format(DATASET, MODEL)
-#print('Read configuration file: %s' % (config_file))
+print('Read configuration file: %s' % (config_file))
 config = configparser.ConfigParser()
 config.read(config_file)
 
