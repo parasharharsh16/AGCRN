@@ -1,7 +1,7 @@
 # This README file is modified to submit the code for assignment.
-# This code credit goes to Authors of Model AGCRN
+#### This code credit goes to Authors of Model AGCRN
 
-# This code is modified to run on METR-LA datset
+#### This code is modified to run on METR-LA datset
 
 ## Requirements
 
@@ -16,12 +16,12 @@ https://www.kaggle.com/datasets/annnnguyen/metr-la-dataset
 - For this experiment, i have already added converted NPZ file for METR-LA (which is in data/METR-LA folder), user do not need to redownload and process it.
 
 ## How to run
-# Run locally on METR-LA dataset 
+#### Run locally on METR-LA dataset 
 - (if you want to change the dataset, either pass the argument to run.py or change the dataset name in the code in run.py)
 - move to model folder
 - python run.py
 
-## Run code on Google Colab on METR-LA dataset 
+#### Run code on Google Colab on METR-LA dataset 
 
 - Clone the repo to your colab instance by following code
 !git clone https://github.com/parasharharsh16/AGCRN.git
@@ -33,7 +33,7 @@ https://www.kaggle.com/datasets/annnnguyen/metr-la-dataset
 !python Run.py
 
 
-References:
+####References:
 The credits of this code goes to https://arxiv.org/pdf/2007.02842.pdf
 
 
