@@ -17,12 +17,11 @@ def PreprocessDataset(nodefile_path = "data/METR-LA/node_values.npy", adjacency_
     if file_type == "npy":
         adjacency_matrix = np.load(adjacency_matrix_path)  
         node_values = np.load(nodefile_path)  
-        #file_path = "data/METR-LA/METR-LA_to_PEMS_from_adjacency.npz"
         # Extract traffic flow data from node_data
         traffic_flow_data = node_values[:, :, 0]  # Assuming traffic flow is in the first column
 
-        # Reshape traffic flow data to match the desired format
-        traffic_flow_data_reshaped = np.expand_dims(traffic_flow_data, axis=0)
+        # Reshape traffic flow data to match the desired format (num_samples, num_nodes, 1)
+        traffic_flow_data_reshaped = traffic_flow_data[:, :, np.newaxis]
 
         # Save traffic flow data in the .npz format with key 'data'
         np.savez(file_path, data=traffic_flow_data_reshaped)
@@ -32,4 +31,4 @@ def PreprocessDataset(nodefile_path = "data/METR-LA/node_values.npy", adjacency_
 
     return file_path
 
-PreprocessDataset()
+#PreprocessDataset()
